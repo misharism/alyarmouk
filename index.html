@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Alyarmouk Daily</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#ffffff; --ink:#121212; --ink-2:#4a4a4a; --ink-3:#767676;
+  --rule:#d6d6d6; --rule-strong:#121212; --tint:#f5f5f3;
+  --up:#0b7a3e; --down:#b3261e; --warn:#8a5a00; --banner:#fff6d6;
+  --serif-display:"Old Standard TT", Georgia, "Times New Roman", serif;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Libre Franklin", "Helvetica Neue", Arial, sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#151515; --ink:#ececec; --ink-2:#bdbdbd; --ink-3:#8f8f8f;
+    --rule:#333; --rule-strong:#ececec; --tint:#1e1e1e;
+    --up:#4cc283; --down:#ff7a70; --warn:#e0b04a; --banner:#2b2615;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#151515; --ink:#ececec; --ink-2:#bdbdbd; --ink-3:#8f8f8f;
+  --rule:#333; --rule-strong:#ececec; --tint:#1e1e1e;
+  --up:#4cc283; --down:#ff7a70; --warn:#e0b04a; --banner:#2b2615;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+/* Top utility bar */
+.util{font-family:var(--sans);font-size:13px;color:var(--ink-2);display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--rule)}
+.util b{color:var(--ink);font-weight:600}
+
+/* Masthead */
+.mast{text-align:center;padding:22px 0 10px}
+.mast h1{font-family:var(--serif-display);font-weight:700;font-size:clamp(40px,8vw,84px);line-height:1;letter-spacing:-.01em;margin:0}
+.mast p{font-family:var(--serif);font-style:italic;color:var(--ink-2);margin:10px 0 0;font-size:15px}
+.dateline{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 16px;font-family:var(--sans);font-size:13px;border-top:3px double var(--rule-strong);border-bottom:1px solid var(--rule-strong);padding:7px 0;margin-top:16px}
+
+/* Nav */
+nav.sections{display:flex;justify-content:center;gap:4px 22px;flex-wrap:wrap;font-family:var(--sans);font-size:14px;font-weight:600;padding:10px 0;border-bottom:1px solid var(--rule)}
+nav.sections a{text-decoration:none;padding:4px 0}
+nav.sections a:hover{text-decoration:underline;text-underline-offset:4px}
+
+.sample{background:var(--banner);font-family:var(--sans);font-size:13px;padding:9px 14px;margin:14px 0 0;border-left:3px solid var(--warn)}
+
+/* Ticker strip */
+.tickers{display:flex;gap:0;overflow-x:auto;border-bottom:1px solid var(--rule);font-family:var(--sans);font-size:13px;scrollbar-width:thin}
+.tick{flex:1 0 auto;padding:10px 16px;border-right:1px solid var(--rule);white-space:nowrap}
+.tick:last-child{border-right:0}
+.tick .n{font-weight:600}
+.tick .v{margin-left:6px;font-variant-numeric:tabular-nums}
+.tick .c{margin-left:6px;font-weight:600;font-variant-numeric:tabular-nums}
+.up{color:var(--up)} .down{color:var(--down)}
+
+/* Front page grid */
+.front{display:grid;grid-template-columns:1fr 2fr 1fr;gap:0;margin-top:22px;border-bottom:1px solid var(--rule-strong);padding-bottom:22px}
+.front > *{padding:0 20px}
+.front > *:first-child{padding-left:0}
+.front > *:last-child{padding-right:0}
+.front > * + *{border-left:1px solid var(--rule)}
+.kicker{font-family:var(--sans);font-size:13px;font-weight:600;color:var(--ink-2);margin:0 0 6px}
+.lead h2{font-family:var(--serif);font-weight:700;font-size:clamp(28px,3.6vw,40px);line-height:1.12;margin:0 0 12px;letter-spacing:-.01em}
+.lead .dek{font-size:19px;color:var(--ink-2);margin:0 0 14px}
+.lead .body p{margin:0 0 12px}
+.byline{font-family:var(--sans);font-size:12px;color:var(--ink-3);margin-bottom:14px}
+
+.story{padding:0 0 16px;margin-bottom:16px;border-bottom:1px solid var(--rule)}
+.story:last-child{border-bottom:0;margin-bottom:0}
+.story h3{font-family:var(--serif);font-size:19px;line-height:1.25;margin:0 0 6px;font-weight:700}
+.story p{margin:0;font-size:15px;color:var(--ink-2)}
+.story .src{font-family:var(--sans);font-size:12px;color:var(--ink-3);margin-top:6px}
+
+.events ol{list-style:none;margin:0;padding:0}
+.events li{padding:10px 0;border-bottom:1px solid var(--rule);font-size:15px}
+.events li:last-child{border-bottom:0}
+.events time{display:block;font-family:var(--sans);font-size:12px;font-weight:700;color:var(--ink)}
+
+/* Section headings */
+.sect{margin-top:34px}
+.sect-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;border-top:3px solid var(--rule-strong);padding-top:8px;margin-bottom:18px}
+.sect-head h2{font-family:var(--serif-display);font-size:30px;margin:0;font-weight:700}
+.sect-head span{font-family:var(--sans);font-size:13px;color:var(--ink-3)}
+
+/* Watchlist */
+.watch{display:grid;grid-template-columns:repeat(5,1fr);gap:0}
+.pick{padding:0 16px;border-left:1px solid var(--rule)}
+.pick:first-child{padding-left:0;border-left:0}
+.pick:last-child{padding-right:0}
+.pick .rank{font-family:var(--serif-display);font-size:44px;line-height:1;color:var(--ink-3)}
+.pick .sym{font-family:var(--sans);font-weight:700;font-size:20px;margin-top:4px}
+.pick .name{font-size:14px;color:var(--ink-2);margin-bottom:8px}
+.pick .price{font-family:var(--sans);font-size:14px;font-variant-numeric:tabular-nums;margin-bottom:10px}
+.pick h4{font-family:var(--sans);font-size:12px;font-weight:700;margin:12px 0 3px;color:var(--ink)}
+.pick p{margin:0;font-size:14px;line-height:1.45;color:var(--ink-2)}
+.signal{display:inline-block;font-family:var(--sans);font-size:12px;font-weight:700;padding:2px 8px;border:1px solid currentColor}
+.signal.high{color:var(--up)} .signal.medium{color:var(--warn)} .signal.low{color:var(--ink-3)}
+.levels{width:100%;border-collapse:collapse;font-family:var(--sans);font-size:13px;margin-top:6px;font-variant-numeric:tabular-nums}
+.levels td{padding:3px 0;border-bottom:1px dotted var(--rule)}
+.levels td:last-child{text-align:right;font-weight:600}
+
+/* Two-column lower */
+.lower{display:grid;grid-template-columns:2fr 1fr;gap:0}
+.lower > *{padding:0 20px}
+.lower > *:first-child{padding-left:0}
+.lower > *:last-child{padding-right:0;border-left:1px solid var(--rule)}
+.newsgrid{columns:2;column-gap:32px;column-rule:1px solid var(--rule)}
+.newsgrid .story{break-inside:avoid}
+.avoid .item{padding:12px 0;border-bottom:1px solid var(--rule)}
+.avoid .item:last-child{border-bottom:0}
+.avoid .sym{font-family:var(--sans);font-weight:700;color:var(--down)}
+.avoid p{margin:4px 0 0;font-size:15px;color:var(--ink-2)}
+.shifts{margin-top:24px;background:var(--tint);padding:16px}
+.shifts h3{font-family:var(--serif);margin:0 0 8px;font-size:18px}
+.shifts ul{margin:0;padding-left:18px;font-size:15px}
+.shifts li{margin-bottom:6px}
+
+/* Crypto table */
+.tablewrap{overflow-x:auto}
+table.crypto{width:100%;border-collapse:collapse;font-family:var(--sans);font-size:14px;font-variant-numeric:tabular-nums;min-width:560px}
+table.crypto th{text-align:left;font-weight:700;font-size:12px;color:var(--ink-2);border-bottom:2px solid var(--rule-strong);padding:8px 10px 8px 0}
+table.crypto td{padding:10px 10px 10px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+table.crypto td.num,table.crypto th.num{text-align:right}
+table.crypto td.note{font-family:var(--serif);color:var(--ink-2);font-size:14px;max-width:360px}
+
+footer{margin-top:44px;border-top:3px double var(--rule-strong);padding:18px 0 36px;font-family:var(--sans);font-size:13px;color:var(--ink-2)}
+footer .fname{font-family:var(--serif-display);font-size:24px;color:var(--ink);font-weight:700}
+footer p{max-width:72ch}
+
+.theme-btn{background:none;border:1px solid var(--rule);color:var(--ink);font-family:var(--sans);font-size:12px;padding:3px 10px;cursor:pointer}
+
+@media (max-width:980px){
+  .front{grid-template-columns:1fr 1fr}
+  .front .lead{grid-column:1 / -1;order:-1;padding:0 0 20px;border-left:0;border-bottom:1px solid var(--rule);margin-bottom:20px}
+  .front > .col-left{padding-left:0;border-left:0}
+  .watch{grid-template-columns:repeat(2,1fr);row-gap:28px}
+  .pick{padding:0 16px 0 0;border-left:0}
+  .pick:nth-child(even){padding:0 0 0 16px;border-left:1px solid var(--rule)}
+}
+@media (max-width:680px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  .util .hide-sm{display:none}
+  .front{grid-template-columns:1fr}
+  .front > *{padding:0 !important;border-left:0 !important}
+  .front > .col-left,.front > .events{border-top:1px solid var(--rule);padding-top:18px !important;margin-top:18px}
+  .front .lead{margin-bottom:0}
+  .watch{grid-template-columns:1fr}
+  .pick,.pick:nth-child(even){padding:0 0 22px !important;border-left:0;border-bottom:1px solid var(--rule)}
+  .lower{grid-template-columns:1fr}
+  .lower > *{padding:0 !important;border-left:0 !important}
+  .lower > *:last-child{margin-top:28px}
+  .newsgrid{columns:1}
+  .sect-head h2{font-size:26px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .mast h1{animation:ink .9s ease-out both}
+  @keyframes ink{from{opacity:0;letter-spacing:.06em}to{opacity:1;letter-spacing:-.01em}}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="util">
+    <span><b id="u-date"></b> <span class="hide-sm">· Kuwait edition</span></span>
+    <span>Updated <b id="u-time"></b> <button class="theme-btn" id="theme" aria-label="Switch light or dark mode">Light / Dark</button></span>
+  </div>
+
+  <header class="mast">
+    <h1>Alyarmouk Daily</h1>
+    <p>Markets, money and the news behind them, every morning</p>
+    <div class="dateline">
+      <span id="d-long"></span>
+      <span id="d-edition"></span>
+      <span>US equities and digital assets</span>
+    </div>
+  </header>
+
+  <nav class="sections" aria-label="Sections">
+    <a href="#front">Front page</a>
+    <a href="#watchlist">Watchlist</a>
+    <a href="#news">Markets news</a>
+    <a href="#crypto">Crypto</a>
+    <a href="#avoid">Caution list</a>
+  </nav>
+
+  <div class="sample" id="sample-banner" hidden></div>
+
+  <div class="tickers" id="tickers" aria-label="Market snapshot"></div>
+
+  <section class="front" id="front">
+    <div class="col-left" id="side-stories"></div>
+    <article class="lead" id="lead"></article>
+    <aside class="events" aria-labelledby="ev-h">
+      <p class="kicker" id="ev-h">Today's calendar (Kuwait time)</p>
+      <ol id="events"></ol>
+    </aside>
+  </section>
+
+  <section class="sect" id="watchlist">
+    <div class="sect-head"><h2>Today's five to watch</h2><span>Ranked by strength of catalyst, not a guarantee of returns</span></div>
+    <div class="watch" id="picks"></div>
+  </section>
+
+  <section class="sect" id="news">
+    <div class="sect-head"><h2>Markets news</h2><span id="news-count"></span></div>
+    <div class="lower">
+      <div class="newsgrid" id="newsgrid"></div>
+      <div id="avoid">
+        <p class="kicker">Caution list</p>
+        <div class="avoid" id="avoidlist"></div>
+        <div class="shifts">
+          <h3>What changed since yesterday</h3>
+          <ul id="shifts"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sect" id="crypto">
+    <div class="sect-head"><h2>Digital assets</h2><span>24-hour moves</span></div>
+    <div class="tablewrap">
+      <table class="crypto">
+        <thead><tr><th>Asset</th><th class="num">Price (USD)</th><th class="num">24h</th><th class="num">7d</th><th>What's moving it</th></tr></thead>
+        <tbody id="cryptorows"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <div class="fname">Alyarmouk Daily</div>
+    <p id="disclaimer"></p>
+    <p>Compiled automatically each morning from market data and news feeds, summarized by AI. Verify prices with your broker before acting.</p>
+  </footer>
+</div>
+
+<!--
+  EDITION DATA
+  Your daily workflow replaces this JSON (or publishes a data.json file next to this page).
+  Keep the same field names and the page will render the new edition automatically.
+-->
+<script id="edition" type="application/json">
+{
+  "sample": true,
+  "date": "2026-10-12",
+  "updated": "07:00",
+  "edition": "Vol. 1, No. 1",
+  "tickers": [
+    {"name":"S&P 500","value":"—","change":0.0},
+    {"name":"Nasdaq","value":"—","change":0.0},
+    {"name":"Dow","value":"—","change":0.0},
+    {"name":"10Y yield","value":"—","change":0.0},
+    {"name":"Oil (Brent)","value":"—","change":0.0},
+    {"name":"Bitcoin","value":"—","change":0.0},
+    {"name":"Ether","value":"—","change":0.0}
+  ],
+  "lead": {
+    "kicker": "Market overview",
+    "headline": "Your morning market story will lead here",
+    "dek": "Each day the AI writes a short overview of overall sentiment, the major index and crypto moves, and the two or three events driving markets.",
+    "body": [
+      "This is a sample edition showing the layout. Once your daily workflow is connected, this space will hold a real summary written from that morning's news and data.",
+      "The overview is capped at about 150 words so you can read it in under a minute before the US open."
+    ]
+  },
+  "side": [
+    {"kicker":"Earnings","headline":"Biggest earnings report of the day","summary":"Which company reports, what analysts expect, and why it matters for the sector.","source":"Source name"},
+    {"kicker":"Economy","headline":"Key economic release","summary":"A data release such as inflation or jobs, and how markets may react.","source":"Source name"},
+    {"kicker":"Policy","headline":"Central bank or regulation story","summary":"Fed commentary or a regulatory decision affecting stocks or crypto.","source":"Source name"}
+  ],
+  "events": [
+    {"time":"15:30","text":"Example: US economic data release"},
+    {"time":"16:30","text":"Example: US market open"},
+    {"time":"21:00","text":"Example: Fed official speaks"},
+    {"time":"23:05","text":"Example: After-hours earnings"}
+  ],
+  "picks": [
+    {"symbol":"TICKER1","name":"Company or coin name","price":"—","change":0.0,"signal":"High","horizon":"Days","catalyst":"The specific news or data behind the pick.","bull":"What happens if the setup works.","bear":"The main risk that would break it.","support":"—","resistance":"—","invalidation":"—"},
+    {"symbol":"TICKER2","name":"Company or coin name","price":"—","change":0.0,"signal":"High","horizon":"Intraday","catalyst":"The specific news or data behind the pick.","bull":"What happens if the setup works.","bear":"The main risk that would break it.","support":"—","resistance":"—","invalidation":"—"},
+    {"symbol":"TICKER3","name":"Company or coin name","price":"—","change":0.0,"signal":"Medium","horizon":"Weeks","catalyst":"The specific news or data behind the pick.","bull":"What happens if the setup works.","bear":"The main risk that would break it.","support":"—","resistance":"—","invalidation":"—"},
+    {"symbol":"TICKER4","name":"Company or coin name","price":"—","change":0.0,"signal":"Medium","horizon":"Days","catalyst":"The specific news or data behind the pick.","bull":"What happens if the setup works.","bear":"The main risk that would break it.","support":"—","resistance":"—","invalidation":"—"},
+    {"symbol":"TICKER5","name":"Company or coin name","price":"—","change":0.0,"signal":"Low","horizon":"Days","catalyst":"The specific news or data behind the pick.","bull":"What happens if the setup works.","bear":"The main risk that would break it.","support":"—","resistance":"—","invalidation":"—"}
+  ],
+  "news": [
+    {"kicker":"Technology","headline":"Sector headline","summary":"Two-sentence summary of the story and why it matters to investors.","source":"Source name"},
+    {"kicker":"Banks","headline":"Sector headline","summary":"Two-sentence summary of the story and why it matters to investors.","source":"Source name"},
+    {"kicker":"Energy","headline":"Sector headline","summary":"Two-sentence summary of the story and why it matters to investors.","source":"Source name"},
+    {"kicker":"Analyst moves","headline":"Upgrades and downgrades","summary":"Notable rating changes and price-target revisions from major brokers.","source":"Source name"},
+    {"kicker":"Healthcare","headline":"Sector headline","summary":"Two-sentence summary of the story and why it matters to investors.","source":"Source name"},
+    {"kicker":"Global","headline":"International market headline","summary":"Moves in Asia, Europe or the Gulf that could affect the US session.","source":"Source name"}
+  ],
+  "avoid": [
+    {"symbol":"TICKER","reason":"A name with a negative catalyst, or hype the data doesn't support."},
+    {"symbol":"TICKER","reason":"A name with a negative catalyst, or hype the data doesn't support."}
+  ],
+  "shifts": [
+    "Sentiment change versus yesterday.",
+    "A sector or coin that turned stronger or weaker.",
+    "Any pick from yesterday that hit its invalidation level."
+  ],
+  "crypto": [
+    {"asset":"Bitcoin (BTC)","price":"—","d1":0.0,"d7":0.0,"note":"Main driver of the move: ETF flows, macro, or news."},
+    {"asset":"Ether (ETH)","price":"—","d1":0.0,"d7":0.0,"note":"Main driver of the move."},
+    {"asset":"Solana (SOL)","price":"—","d1":0.0,"d7":0.0,"note":"Main driver of the move."},
+    {"asset":"XRP","price":"—","d1":0.0,"d7":0.0,"note":"Main driver of the move."}
+  ],
+  "disclaimer": "This is research, not financial advice. No forecast is certain, and short-term trading can lose money quickly. Size positions carefully and always use a stop-loss."
+}
+</script>
+
+<script>
+(function(){
+  const $ = s => document.querySelector(s);
+  const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const pct = n => {
+    const v = Number(n) || 0;
+    const cls = v > 0 ? "up" : v < 0 ? "down" : "";
+    const sign = v > 0 ? "+" : "";
+    return `<span class="${cls}">${sign}${v.toFixed(2)}%</span>`;
+  };
+
+  // Theme toggle (remembered per viewer)
+  try { const t = localStorage.getItem("ayd-theme"); if (t) document.documentElement.dataset.theme = t; } catch(e){}
+  $("#theme").addEventListener("click", () => {
+    const cur = document.documentElement.dataset.theme ||
+      (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    const next = cur === "dark" ? "light" : "dark";
+    document.documentElement.dataset.theme = next;
+    try { localStorage.setItem("ayd-theme", next); } catch(e){}
+  });
+
+  function render(d){
+    const dt = new Date(d.date + "T12:00:00");
+    const long = dt.toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long",year:"numeric"});
+    $("#u-date").textContent = dt.toLocaleDateString("en-GB",{weekday:"short",day:"numeric",month:"short",year:"numeric"});
+    $("#u-time").textContent = (d.updated || "") + " KWT";
+    $("#d-long").textContent = long;
+    $("#d-edition").textContent = d.edition || "";
+
+    const banner = $("#sample-banner");
+    if (d.sample){
+      banner.hidden = false;
+      banner.textContent = "Sample edition: this shows the layout only. Real news and prices appear once your daily update is connected.";
+    }
+
+    $("#tickers").innerHTML = (d.tickers||[]).map(t =>
+      `<div class="tick"><span class="n">${esc(t.name)}</span><span class="v">${esc(t.value)}</span><span class="c">${pct(t.change)}</span></div>`).join("");
+
+    const L = d.lead || {};
+    $("#lead").innerHTML = `
+      <p class="kicker">${esc(L.kicker)}</p>
+      <h2>${esc(L.headline)}</h2>
+      <p class="dek">${esc(L.dek)}</p>
+      <div class="byline">Alyarmouk Daily desk · ${esc(long)}</div>
+      <div class="body">${(L.body||[]).map(p=>`<p>${esc(p)}</p>`).join("")}</div>`;
+
+    const story = s => `<div class="story"><p class="kicker">${esc(s.kicker)}</p><h3>${esc(s.headline)}</h3><p>${esc(s.summary)}</p>${s.source?`<div class="src">${s.url?`<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.source)}</a>`:esc(s.source)}</div>`:""}</div>`;
+    $("#side-stories").innerHTML = (d.side||[]).map(story).join("");
+    $("#newsgrid").innerHTML = (d.news||[]).map(story).join("");
+    $("#news-count").textContent = (d.news||[]).length + " stories";
+
+    $("#events").innerHTML = (d.events||[]).map(e=>`<li><time>${esc(e.time)}</time>${esc(e.text)}</li>`).join("");
+
+    $("#picks").innerHTML = (d.picks||[]).slice(0,5).map((p,i)=>`
+      <article class="pick">
+        <div class="rank">${i+1}</div>
+        <div class="sym">${esc(p.symbol)}</div>
+        <div class="name">${esc(p.name)}</div>
+        <div class="price">${esc(p.price)} &nbsp;${pct(p.change)}</div>
+        <span class="signal ${esc((p.signal||"").toLowerCase())}">${esc(p.signal)} signal</span>
+        <span style="font-family:var(--sans);font-size:12px;color:var(--ink-3);margin-left:6px">${esc(p.horizon)}</span>
+        <h4>Catalyst</h4><p>${esc(p.catalyst)}</p>
+        <h4>Bull case</h4><p>${esc(p.bull)}</p>
+        <h4>Key risk</h4><p>${esc(p.bear)}</p>
+        <table class="levels"><tbody>
+          <tr><td>Support</td><td>${esc(p.support)}</td></tr>
+          <tr><td>Resistance</td><td>${esc(p.resistance)}</td></tr>
+          <tr><td>Stop / invalidation</td><td>${esc(p.invalidation)}</td></tr>
+        </tbody></table>
+      </article>`).join("");
+
+    $("#avoidlist").innerHTML = (d.avoid||[]).map(a=>`<div class="item"><span class="sym">${esc(a.symbol)}</span><p>${esc(a.reason)}</p></div>`).join("");
+    $("#shifts").innerHTML = (d.shifts||[]).map(s=>`<li>${esc(s)}</li>`).join("");
+
+    $("#cryptorows").innerHTML = (d.crypto||[]).map(c=>`<tr><td><b>${esc(c.asset)}</b></td><td class="num">${esc(c.price)}</td><td class="num">${pct(c.d1)}</td><td class="num">${pct(c.d7)}</td><td class="note">${esc(c.note)}</td></tr>`).join("");
+
+    $("#disclaimer").textContent = d.disclaimer || "";
+  }
+
+  const embedded = JSON.parse(document.getElementById("edition").textContent);
+  render(embedded);
+
+  // When hosted with a data.json beside this page, load the latest edition from it.
+  fetch("data.json", {cache:"no-store"})
+    .then(r => r.ok ? r.json() : null)
+    .then(d => { if (d && d.date) render(d); })
+    .catch(() => {});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,246 @@
+{
+  "sample": true,
+  "date": "2026-10-12",
+  "updated": "07:00",
+  "edition": "Vol. 1, No. 1",
+  "tickers": [
+    {
+      "name": "S&P 500",
+      "value": "—",
+      "change": 0.0
+    },
+    {
+      "name": "Nasdaq",
+      "value": "—",
+      "change": 0.0
+    },
+    {
+      "name": "Dow",
+      "value": "—",
+      "change": 0.0
+    },
+    {
+      "name": "10Y yield",
+      "value": "—",
+      "change": 0.0
+    },
+    {
+      "name": "Oil (Brent)",
+      "value": "—",
+      "change": 0.0
+    },
+    {
+      "name": "Bitcoin",
+      "value": "—",
+      "change": 0.0
+    },
+    {
+      "name": "Ether",
+      "value": "—",
+      "change": 0.0
+    }
+  ],
+  "lead": {
+    "kicker": "Market overview",
+    "headline": "Your morning market story will lead here",
+    "dek": "Each day the AI writes a short overview of overall sentiment, the major index and crypto moves, and the two or three events driving markets.",
+    "body": [
+      "This is a sample edition showing the layout. Once your daily workflow is connected, this space will hold a real summary written from that morning's news and data.",
+      "The overview is capped at about 150 words so you can read it in under a minute before the US open."
+    ]
+  },
+  "side": [
+    {
+      "kicker": "Earnings",
+      "headline": "Biggest earnings report of the day",
+      "summary": "Which company reports, what analysts expect, and why it matters for the sector.",
+      "source": "Source name"
+    },
+    {
+      "kicker": "Economy",
+      "headline": "Key economic release",
+      "summary": "A data release such as inflation or jobs, and how markets may react.",
+      "source": "Source name"
+    },
+    {
+      "kicker": "Policy",
+      "headline": "Central bank or regulation story",
+      "summary": "Fed commentary or a regulatory decision affecting stocks or crypto.",
+      "source": "Source name"
+    }
+  ],
+  "events": [
+    {
+      "time": "15:30",
+      "text": "Example: US economic data release"
+    },
+    {
+      "time": "16:30",
+      "text": "Example: US market open"
+    },
+    {
+      "time": "21:00",
+      "text": "Example: Fed official speaks"
+    },
+    {
+      "time": "23:05",
+      "text": "Example: After-hours earnings"
+    }
+  ],
+  "picks": [
+    {
+      "symbol": "TICKER1",
+      "name": "Company or coin name",
+      "price": "—",
+      "change": 0.0,
+      "signal": "High",
+      "horizon": "Days",
+      "catalyst": "The specific news or data behind the pick.",
+      "bull": "What happens if the setup works.",
+      "bear": "The main risk that would break it.",
+      "support": "—",
+      "resistance": "—",
+      "invalidation": "—"
+    },
+    {
+      "symbol": "TICKER2",
+      "name": "Company or coin name",
+      "price": "—",
+      "change": 0.0,
+      "signal": "High",
+      "horizon": "Intraday",
+      "catalyst": "The specific news or data behind the pick.",
+      "bull": "What happens if the setup works.",
+      "bear": "The main risk that would break it.",
+      "support": "—",
+      "resistance": "—",
+      "invalidation": "—"
+    },
+    {
+      "symbol": "TICKER3",
+      "name": "Company or coin name",
+      "price": "—",
+      "change": 0.0,
+      "signal": "Medium",
+      "horizon": "Weeks",
+      "catalyst": "The specific news or data behind the pick.",
+      "bull": "What happens if the setup works.",
+      "bear": "The main risk that would break it.",
+      "support": "—",
+      "resistance": "—",
+      "invalidation": "—"
+    },
+    {
+      "symbol": "TICKER4",
+      "name": "Company or coin name",
+      "price": "—",
+      "change": 0.0,
+      "signal": "Medium",
+      "horizon": "Days",
+      "catalyst": "The specific news or data behind the pick.",
+      "bull": "What happens if the setup works.",
+      "bear": "The main risk that would break it.",
+      "support": "—",
+      "resistance": "—",
+      "invalidation": "—"
+    },
+    {
+      "symbol": "TICKER5",
+      "name": "Company or coin name",
+      "price": "—",
+      "change": 0.0,
+      "signal": "Low",
+      "horizon": "Days",
+      "catalyst": "The specific news or data behind the pick.",
+      "bull": "What happens if the setup works.",
+      "bear": "The main risk that would break it.",
+      "support": "—",
+      "resistance": "—",
+      "invalidation": "—"
+    }
+  ],
+  "news": [
+    {
+      "kicker": "Technology",
+      "headline": "Sector headline",
+      "summary": "Two-sentence summary of the story and why it matters to investors.",
+      "source": "Source name"
+    },
+    {
+      "kicker": "Banks",
+      "headline": "Sector headline",
+      "summary": "Two-sentence summary of the story and why it matters to investors.",
+      "source": "Source name"
+    },
+    {
+      "kicker": "Energy",
+      "headline": "Sector headline",
+      "summary": "Two-sentence summary of the story and why it matters to investors.",
+      "source": "Source name"
+    },
+    {
+      "kicker": "Analyst moves",
+      "headline": "Upgrades and downgrades",
+      "summary": "Notable rating changes and price-target revisions from major brokers.",
+      "source": "Source name"
+    },
+    {
+      "kicker": "Healthcare",
+      "headline": "Sector headline",
+      "summary": "Two-sentence summary of the story and why it matters to investors.",
+      "source": "Source name"
+    },
+    {
+      "kicker": "Global",
+      "headline": "International market headline",
+      "summary": "Moves in Asia, Europe or the Gulf that could affect the US session.",
+      "source": "Source name"
+    }
+  ],
+  "avoid": [
+    {
+      "symbol": "TICKER",
+      "reason": "A name with a negative catalyst, or hype the data doesn't support."
+    },
+    {
+      "symbol": "TICKER",
+      "reason": "A name with a negative catalyst, or hype the data doesn't support."
+    }
+  ],
+  "shifts": [
+    "Sentiment change versus yesterday.",
+    "A sector or coin that turned stronger or weaker.",
+    "Any pick from yesterday that hit its invalidation level."
+  ],
+  "crypto": [
+    {
+      "asset": "Bitcoin (BTC)",
+      "price": "—",
+      "d1": 0.0,
+      "d7": 0.0,
+      "note": "Main driver of the move: ETF flows, macro, or news."
+    },
+    {
+      "asset": "Ether (ETH)",
+      "price": "—",
+      "d1": 0.0,
+      "d7": 0.0,
+      "note": "Main driver of the move."
+    },
+    {
+      "asset": "Solana (SOL)",
+      "price": "—",
+      "d1": 0.0,
+      "d7": 0.0,
+      "note": "Main driver of the move."
+    },
+    {
+      "asset": "XRP",
+      "price": "—",
+      "d1": 0.0,
+      "d7": 0.0,
+      "note": "Main driver of the move."
+    }
+  ],
+  "disclaimer": "This is research, not financial advice. No forecast is certain, and short-term trading can lose money quickly. Size positions carefully and always use a stop-loss."
+}
