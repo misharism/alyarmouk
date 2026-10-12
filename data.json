@@ -1,245 +1,244 @@
 {
-  "sample": true,
+  "sample": false,
   "date": "2026-10-12",
-  "updated": "07:00",
-  "edition": "Vol. 1, No. 1",
+  "updated": "16:40",
+  "edition": "Vol. 1, No. 2",
   "tickers": [
     {
       "name": "S&P 500",
-      "value": "—",
-      "change": 0.0
+      "value": "7,811.51",
+      "change": 0.59
     },
     {
       "name": "Nasdaq",
-      "value": "—",
-      "change": 0.0
+      "value": "27,366.17",
+      "change": 0.64
     },
     {
       "name": "Dow",
-      "value": "—",
-      "change": 0.0
+      "value": "51,655.01",
+      "change": 0.83
     },
     {
       "name": "10Y yield",
-      "value": "—",
-      "change": 0.0
+      "value": "5.25%",
+      "change": 0.29
     },
     {
       "name": "Oil (Brent)",
-      "value": "—",
-      "change": 0.0
+      "value": "$106.19",
+      "change": 1.2
     },
     {
       "name": "Bitcoin",
-      "value": "—",
-      "change": 0.0
+      "value": "$82,557",
+      "change": -0.6
     },
     {
       "name": "Ether",
-      "value": "—",
-      "change": 0.0
+      "value": "$2,526",
+      "change": 0.9
     }
   ],
   "lead": {
     "kicker": "Market overview",
-    "headline": "Your morning market story will lead here",
-    "dek": "Each day the AI writes a short overview of overall sentiment, the major index and crypto moves, and the two or three events driving markets.",
+    "headline": "Flat start to bank-earnings week as oil tops $106 and yields stay near 24-year highs",
+    "dek": "Index levels are Friday's close. Stocks trade normally on Columbus Day, but the cash Treasury market is shut and no US data is due.",
     "body": [
-      "This is a sample edition showing the layout. Once your daily workflow is connected, this space will hold a real summary written from that morning's news and data.",
-      "The overview is capped at about 150 words so you can read it in under a minute before the US open."
+      "Wall Street closed Friday higher (S&P 500 +0.59%, Dow +0.83%, Nasdaq +0.64%), with the S&P and Nasdaq near last week's record highs. Futures were flat on Monday and CNBC reported a little-changed open, with Micron leading chips lower.",
+      "The pressure points are rates and oil. The 10-year yield sits near 5.25% after touching about 5.37% last Wednesday, the highest since 2002. Brent rose 1.2% to $106.19 after weekend Houthi strikes on Riyadh airport and tanker attacks near Hormuz. Trump's Russian diesel deal hit diesel futures, not crude.",
+      "Watch for the bank results on Tuesday (JPM, GS, C, WFC) and September CPI on Wednesday, forecast at 3.6% y/y. Crypto stays soft, with BTC down about 4% on the week."
     ]
   },
   "side": [
     {
       "kicker": "Earnings",
-      "headline": "Biggest earnings report of the day",
-      "summary": "Which company reports, what analysts expect, and why it matters for the sector.",
-      "source": "Source name"
+      "headline": "Q3 season starts Tuesday with JPMorgan, Goldman, Citi and Wells Fargo",
+      "summary": "Consensus EPS: JPM $5.93, GS $13.04, C $2.65, WFC $1.85; J&J ($2.51) and UnitedHealth ($4.12) also report before Tuesday's open. UBS says options are pricing the largest earnings-day moves since Covid.",
+      "source": "HeyGoTrade / FXEmpire",
+      "url": "https://www.heygotrade.com/en/news/us-q3-earnings-season-kicks-off-with-big-banks-futures-steady-ahead-of-cpippi/"
     },
     {
       "kicker": "Economy",
-      "headline": "Key economic release",
-      "summary": "A data release such as inflation or jobs, and how markets may react.",
-      "source": "Source name"
+      "headline": "CPI Wednesday is the week's macro test",
+      "summary": "September headline CPI is forecast at +0.6% m/m and 3.6% y/y (prior 3.4%), with core at 2.5% y/y. PPI and retail sales follow on Thursday, and no US data is due today because of the holiday.",
+      "source": "HeyGoTrade / FXEmpire",
+      "url": "https://www.heygotrade.com/en/news/us-q3-earnings-season-kicks-off-with-big-banks-futures-steady-ahead-of-cpippi/"
     },
     {
       "kicker": "Policy",
-      "headline": "Central bank or regulation story",
-      "summary": "Fed commentary or a regulatory decision affecting stocks or crypto.",
-      "source": "Source name"
+      "headline": "Fed after its September hike: Waller, Bowman, then Chair Warsh on Friday",
+      "summary": "Cleveland Fed's Hammack said rates need to rise beyond 3.75-4%, and the next FOMC (Oct 27-28) is discussing a second hike. Governor Waller speaks Tuesday, Bowman on Wednesday and Thursday, and Chair Warsh on Friday.",
+      "source": "Babypips / Zack Eiseman / CryptoTicker",
+      "url": "https://www.babypips.com/analysis/fundies-cheat-sheet-2026-10-12-cpi-warsh-yields-oil"
     }
   ],
   "events": [
     {
-      "time": "15:30",
-      "text": "Example: US economic data release"
+      "time": "All day",
+      "text": "Columbus Day: NYSE/Nasdaq open, US cash bond market closed (SIFMA), no US economic data"
     },
     {
       "time": "16:30",
-      "text": "Example: US market open"
+      "text": "US market open (regular hours)"
     },
     {
-      "time": "21:00",
-      "text": "Example: Fed official speaks"
+      "time": "All day",
+      "text": "IMF-World Bank meetings begin in Bangkok (through Oct 18); EU expected to approve its largest Russia sanctions package"
     },
     {
-      "time": "23:05",
-      "text": "Example: After-hours earnings"
+      "time": "—",
+      "text": "Aptos (APT) token unlock, about 11.31M tokens"
+    },
+    {
+      "time": "23:00",
+      "text": "US market close"
+    },
+    {
+      "time": "Tue pre-mkt",
+      "text": "Earnings: JPMorgan, Goldman Sachs, Citi, Wells Fargo, J&J, UnitedHealth; Fed's Waller speaks Tuesday"
+    },
+    {
+      "time": "Wed 15:30",
+      "text": "US September CPI (forecast 3.6% y/y, core 2.5%)"
     }
   ],
   "picks": [
     {
-      "symbol": "TICKER1",
-      "name": "Company or coin name",
-      "price": "—",
-      "change": 0.0,
-      "signal": "High",
-      "horizon": "Days",
-      "catalyst": "The specific news or data behind the pick.",
-      "bull": "What happens if the setup works.",
-      "bear": "The main risk that would break it.",
-      "support": "—",
+      "symbol": "CRM",
+      "name": "Salesforce",
+      "price": "$229.13 (Fri close)",
+      "change": 0.58,
+      "signal": "Medium",
+      "horizon": "Days to weeks",
+      "catalyst": "BofA double-upgraded the stock to Buy from Underperform and raised its target to $285 from $160. Shares rose about 4% premarket.",
+      "bull": "BofA argues AI will make customers more dependent on Salesforce, not disrupt it. A sell-side reversal this sharp can draw follow-through buying if the gap holds.",
+      "bear": "Gap-and-fade risk in a market where 5%+ yields weigh on software valuations. Wells Fargo cut Adobe to Underweight the same day, so the sector call isn't unanimous.",
+      "support": "$229.13 (Friday close / gap base)",
       "resistance": "—",
-      "invalidation": "—"
+      "invalidation": "Daily close back below $229.13 (gap fully filled)"
     },
     {
-      "symbol": "TICKER2",
-      "name": "Company or coin name",
-      "price": "—",
-      "change": 0.0,
-      "signal": "High",
-      "horizon": "Intraday",
-      "catalyst": "The specific news or data behind the pick.",
-      "bull": "What happens if the setup works.",
-      "bear": "The main risk that would break it.",
-      "support": "—",
-      "resistance": "—",
-      "invalidation": "—"
-    },
-    {
-      "symbol": "TICKER3",
-      "name": "Company or coin name",
-      "price": "—",
-      "change": 0.0,
+      "symbol": "FSLR",
+      "name": "First Solar",
+      "price": "$177.82 (Fri close)",
+      "change": -0.58,
       "signal": "Medium",
       "horizon": "Weeks",
-      "catalyst": "The specific news or data behind the pick.",
-      "bull": "What happens if the setup works.",
-      "bear": "The main risk that would break it.",
-      "support": "—",
+      "catalyst": "Truist upgraded the stock to Buy from Hold and raised its target to $270 from $229. CNBC notes it has lost about a third of its value this year.",
+      "bull": "A beaten-down US-made solar name gets an upgrade with about 50% implied upside to target. Watch for a base-building reversal.",
+      "bear": "High rates hurt solar project financing, and the downtrend this year has been persistent. One upgrade may not be enough to turn it.",
+      "support": "$177.82 (Friday close)",
       "resistance": "—",
-      "invalidation": "—"
+      "invalidation": "Daily close below $177.82 after the upgrade (catalyst rejected)"
     },
     {
-      "symbol": "TICKER4",
-      "name": "Company or coin name",
-      "price": "—",
-      "change": 0.0,
+      "symbol": "BIIB",
+      "name": "Biogen",
+      "price": "$225.71",
+      "change": 3.33,
       "signal": "Medium",
-      "horizon": "Days",
-      "catalyst": "The specific news or data behind the pick.",
-      "bull": "What happens if the setup works.",
-      "bear": "The main risk that would break it.",
+      "horizon": "Weeks to months",
+      "catalyst": "JPMorgan upgraded it to Overweight and raised its target to $300 from $210, citing a promising pipeline of catalysts expected by 2027 beyond Leqembi. Shares rose about 2% premarket.",
+      "bull": "Pipeline readouts could re-rate the stock beyond Alzheimer's. Defensive healthcare also offers some cover if CPI or yields knock growth stocks.",
+      "bear": "Pipeline timing runs to 2027, so this is a slow catalyst. Multiple sclerosis franchise erosion continues, and clinical risk is binary.",
       "support": "—",
       "resistance": "—",
-      "invalidation": "—"
-    },
-    {
-      "symbol": "TICKER5",
-      "name": "Company or coin name",
-      "price": "—",
-      "change": 0.0,
-      "signal": "Low",
-      "horizon": "Days",
-      "catalyst": "The specific news or data behind the pick.",
-      "bull": "What happens if the setup works.",
-      "bear": "The main risk that would break it.",
-      "support": "—",
-      "resistance": "—",
-      "invalidation": "—"
+      "invalidation": "Close below the pre-upgrade level (Friday close) would negate the catalyst"
     }
   ],
   "news": [
     {
       "kicker": "Technology",
-      "headline": "Sector headline",
-      "summary": "Two-sentence summary of the story and why it matters to investors.",
-      "source": "Source name"
+      "headline": "Chips lead tech lower at the open; Micron down about 2%",
+      "summary": "Micron, SanDisk and Intel traded lower early on rotation out of high-valuation tech, while Nvidia held near flat. Separately, Nvidia is reported to be in early talks to acquire or deepen its stake in Reflection AI.",
+      "source": "CNBC / StockMarketWatch",
+      "url": "https://www.cnbc.com/2026/10/11/stock-market-today-live-updates.html"
     },
     {
       "kicker": "Banks",
-      "headline": "Sector headline",
-      "summary": "Two-sentence summary of the story and why it matters to investors.",
-      "source": "Source name"
+      "headline": "Five big banks, two days: can trading offset higher yields?",
+      "summary": "JPM, GS, C and WFC report Tuesday, with BAC and Morgan Stanley on Wednesday. Investors will watch whether strong trading revenue offsets funding-cost and credit pressure from a 5%+ 10-year yield.",
+      "source": "FinancialContent",
+      "url": "https://www.financialcontent.com/article/gnwcq-2026-10-12-five-big-banks-two-days-one-question-can-record-trading-offset-the-pressure-from-rising-yields"
     },
     {
       "kicker": "Energy",
-      "headline": "Sector headline",
-      "summary": "Two-sentence summary of the story and why it matters to investors.",
-      "source": "Source name"
+      "headline": "Brent climbs to $106 as Saudi attacks outweigh Russian diesel deal",
+      "summary": "Brent rose 1.2% to $106.19 by 11:24 GMT, its highest since Sept. 29, after Houthi strikes on Riyadh airport and tanker attacks near Hormuz. Goldman raised its December Brent forecast to $90 and estimates a risk premium of just over $20.",
+      "source": "Reuters via Business Recorder",
+      "url": "https://www.brecorder.com/news/40443764/oil-prices-rise-as-attacks-on-saudi-arabia-overshadow-trumps-russian-supply-announcements"
     },
     {
       "kicker": "Analyst moves",
-      "headline": "Upgrades and downgrades",
-      "summary": "Notable rating changes and price-target revisions from major brokers.",
-      "source": "Source name"
+      "headline": "Upgrades: CRM, FSLR, BIIB, TMUS. Downgrades: ADBE, HUBS, GDDY, PLTR",
+      "summary": "Wells Fargo cut Adobe to Underweight (target $225) and Barclays cut HubSpot to Equal Weight. Raymond James upgraded T-Mobile to Outperform after its 13% drop, and Evercore started Robinhood at Outperform with a $130 target.",
+      "source": "24/7 Wall St.",
+      "url": "https://247wallst.com/investing/2026/10/12/here-are-mondays-top-wall-street-analyst-research-calls-adobe-biogen-first-solar-godaddy-hubspot-palantir-technologies-robinhood-markets-snowflake-terawulf-t-mobile-us-and-more/"
     },
     {
-      "kicker": "Healthcare",
-      "headline": "Sector headline",
-      "summary": "Two-sentence summary of the story and why it matters to investors.",
-      "source": "Source name"
+      "kicker": "Telecom",
+      "headline": "SpaceX's $8B spectrum buy rattles carriers, lifts tower stocks",
+      "summary": "SpaceX agreed to buy Grain Management's 800 MHz portfolio for about $8 billion to power Starlink Mobile. T-Mobile, Verizon and AT&T fell 8.5-13% on Friday while Crown Castle, SBA and American Tower rose 7-16%.",
+      "source": "Broadband Breakfast / Yahoo Finance",
+      "url": "https://broadbandbreakfast.com/earthquake-in-the-sky-spacex-pays-8-billion-for-grain-management-airwaves-to-advance-starlink-mobile/"
     },
     {
-      "kicker": "Global",
-      "headline": "International market headline",
-      "summary": "Moves in Asia, Europe or the Gulf that could affect the US session.",
-      "source": "Source name"
+      "kicker": "Crypto policy",
+      "headline": "With the Clarity Act stalled, the SEC and CFTC write the rules",
+      "summary": "The SEC has issued an innovation exemption for tokenized-equity trading and proposed crypto custody rules, and the CFTC is seeking comment on leveraged retail crypto. Spot trading still lacks full federal oversight.",
+      "source": "CoinDesk",
+      "url": "https://coindesk.com/policy/2026/10/11/clarity-s-failure-could-speed-crypto-innovation-while-shielding-incumbents"
     }
   ],
   "avoid": [
     {
-      "symbol": "TICKER",
-      "reason": "A name with a negative catalyst, or hype the data doesn't support."
+      "symbol": "ADBE",
+      "reason": "Wells Fargo downgraded it to Underweight (target $225, below Friday's $242.27), and it traded about 2.6% lower early. It's a negative catalyst in software as yields stay above 5%."
     },
     {
-      "symbol": "TICKER",
-      "reason": "A name with a negative catalyst, or hype the data doesn't support."
+      "symbol": "IREN",
+      "reason": "It's up about 4% on a media report, not confirmed by either company, that Anthropic is its unnamed cloud customer, with no terms disclosed. It's still below its 50-day average (~$41.72). Chasing an unverified headline is high risk."
+    },
+    {
+      "symbol": "MNDR / YMAT",
+      "reason": "Micro-cap premarket spikes (+100-190%) at around $2-3 a share with no clear catalyst. These are penny stocks: high risk, low liquidity, and prone to sharp reversals."
     }
   ],
   "shifts": [
-    "Sentiment change versus yesterday.",
-    "A sector or coin that turned stronger or weaker.",
-    "Any pick from yesterday that hit its invalidation level."
+    "This is the first live edition. Yesterday's file was a sample layout with no real picks, so no prior pick could have hit an invalidation level.",
+    "Versus Friday's risk-on close (+0.6-0.8% across indexes), sentiment is flat to cautious. Nasdaq futures lagged, and chips are leading lower.",
+    "Oil turned stronger: Brent is back above $106 (highest since Sept. 29) after weekend Houthi and tanker attacks, up from about $104 at Friday's close.",
+    "Crypto is weaker on the week: BTC is down about 4% and ETH about 7%, with nine straight days of ETH ETF outflows. Monday's moves are small (BTC -0.6%, ETH +0.9%)."
   ],
   "crypto": [
     {
       "asset": "Bitcoin (BTC)",
-      "price": "—",
-      "d1": 0.0,
-      "d7": 0.0,
-      "note": "Main driver of the move: ETF flows, macro, or news."
+      "price": "$82,557",
+      "d1": -0.6,
+      "d7": -4.0,
+      "note": "10-year yields above 5% and Fed hike risk are weighing on it. Spot ETFs took in $21M on Oct 9 after about $679M of outflows over the prior five sessions."
     },
     {
       "asset": "Ether (ETH)",
-      "price": "—",
-      "d1": 0.0,
-      "d7": 0.0,
-      "note": "Main driver of the move."
+      "price": "$2,526",
+      "d1": 0.9,
+      "d7": -6.9,
+      "note": "Spot ETFs have seen about $697M of outflows over nine straight days. Whale accumulation (~166K ETH) and Glamsterdam testnet progress offer some support."
     },
     {
       "asset": "Solana (SOL)",
-      "price": "—",
-      "d1": 0.0,
-      "d7": 0.0,
-      "note": "Main driver of the move."
+      "price": "$109.95",
+      "d1": 0.5,
+      "d7": -8.8,
+      "note": "Weakest top-10 coin last week on risk-off moves. SOL ETFs had outflows on six of seven October days; the Alpenglow mainnet is expected this month."
     },
     {
       "asset": "XRP",
-      "price": "—",
-      "d1": 0.0,
-      "d7": 0.0,
-      "note": "Main driver of the move."
+      "price": "$1.38",
+      "d1": -0.8,
+      "d7": -8.5,
+      "note": "Institutional account controls went live on the XRP Ledger on Oct 9, but the price hasn't responded. It trades as a high-beta altcoin."
     }
   ],
   "disclaimer": "This is research, not financial advice. No forecast is certain, and short-term trading can lose money quickly. Size positions carefully and always use a stop-loss."
